@@ -1,20 +1,17 @@
-import React from 'react';
-import {BrowserRouter, Routes, Route} from 'react-router-dom';
+// src/App.tsx
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Login from './components/Login';
 import Home from './components/Home';
-import Register from './components/Register';
-import SignIn from './components/SignIn';
+
 function App() {
   return (
-  <div> 
-  <BrowserRouter>
-   <Routes>
-    <Route path='/' element = {<SignIn/>}> </Route>
-    <Route path='/register' element = {<Register/>}> </Route>
-    <Route path='/signin' element = {<SignIn/>}> </Route>
-    <Route path='/home' element = {<Home/>}> </Route>
-   </Routes>
-  </BrowserRouter>
-  </div>
+    <Router>
+      <Routes>
+        <Route path="/login" element={<Login />} />
+        <Route path="/home" element={<Home />} />
+      </Routes>
+    </Router>
   );
 }
+
 export default App;
